@@ -15,21 +15,21 @@ where the directed framework is useful.  Thus, the preference of each
 user for a particular product is represented as a directed edge, so
 the representation of user `'u:1'` buying product `'p:1'` is 
 ```bash
-                         'u:1' ----> 'p:1'
+                                         'u:1' ----> 'p:1'
 ```
 This directed network can be reframed as an undirected network of
-users by collapsing user-idea-user connections to user-user
+users by collapsing user-product-user connections to user-user
 connections.  Consider, for example, users `'u:1'` and `'u:2'` that
 both bought product `p:1'`.  Then the representation of the graph
 collapse is
 ```bash
-         'u:1' ----> 'p:1' <---- 'u:2'    =>    'u:1' ---- 'u:2'
+                       'u:1' ----> 'p:1' <---- 'u:2'    =>    'u:1' ---- 'u:2'
 ```
 If `'u:2'` buys another product `'p:2'` that `'u:1'` does not, then we can
 establish a link between `'u:1'` and `'p:2'` in order to recommend this
 product to user `'u:1'`:
 ```bash
-       'u:1' ---- 'u:2' ----> 'p:2'    =>    'u:1' ----> 'p:2'
+                       'u:1' ---- 'u:2' ----> 'p:2'    =>    'u:1' ----> 'p:2'
 ```
 The edges are assumed homogenous and the edge weights are constant.
 The recommendations can be greatly improved by creating a more refined
@@ -38,7 +38,7 @@ recommendation engine works; and we can begin to build an API around
 the output.
 
 The [test namespace] contains a simulated Hylo network, with three
-users and seven ideas.  The clojure representation is a vector of
+users and seven products.  The clojure representation is a vector of
 tuples representing edges:
 
 ```clojure

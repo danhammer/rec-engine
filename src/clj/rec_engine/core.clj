@@ -10,11 +10,11 @@
 
          'a' ----> 'p:1' <---- 'b'    =>    'a' ---- 'b'
 
-  If 'b' purchases another product 'idea:2' that 'a' does not, then we can
+  If 'b' purchases another product 'p:2' that 'a' does not, then we can
   establish a link between 'a' and 'p:2' in order to recommend this
   product to user 'a':
 
-       'a' ---- 'b' ----> 'idea:2'    =>    'a' ----> 'idea:2'
+       'a' ---- 'b' ----> 'p:2'    =>    'a' ----> 'p:2'
 
   The edges are assumed homogenous and the edge weights are constant.
   The recommendations can be greatly improved by creating a more
