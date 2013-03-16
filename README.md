@@ -37,9 +37,9 @@ measure of connectedness.  For now, however, the rough draft
 recommendation engine works; and we can begin to build an API around
 the output.
 
-The [test namespace] contains a simulated Hylo network, with three
-users and seven products.  The clojure representation is a vector of
-tuples representing edges:
+The [test namespace](https://github.com/danhammer/rec-engine/blob/master/test/clj/rec_engine/core_test.clj) contains a simulated network, with three users
+and seven products.  The clojure representation is a vector of tuples
+representing edges:
 
 ```clojure
 (def product-src
